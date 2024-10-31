@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dekbangtlez</title>
+    <link href="css/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <audio id="background-audio" hidden="true" autoplay="true" controlslist="nodownload noplaybackrate"><source src="media/music.mp3" type="audio/mpeg"></audio>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        document.addEventListener('click', function() {
+            document.getElementById('background-audio').play();
+        }, {
+            once: true
+        });
+
+        // ปิดการคลิกขวาและแสดง alert
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert("คลิ๊กขวาหาแม่มึงหรอไอหน้าหี");
+        });
+
+        // ปิดการกด F12 และแสดง alert
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12') {
+                event.preventDefault();
+                alert("กด F12 หาพ่อมึงหรอไอลูกกะหรี่");
+            }
+        });
+    </script>
+
+</head>
+<style>
+    .mb-5 {
+        margin-bottom: 3rem !important
+    }
+</style>
+
+<body>
+    <section id="landing">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="2200">
+                    <div class="left">
+                        <div class="box-welcome">
+                        </div>
+                        <center>
+                            <div class="content">
+                                <div class="containerzz">
+                                    <span class="text sec-text">DEKBANGTLEZ</span>
+                                </div>
+                                <p>
+                                </p>
+                                <a href="https://www.facebook.com/dekbangtlez" target="_blank" class="profile__social-link">
+                                    <i class="ri-facebook-circle-fill"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/t34mspeakuserz/" target="_blank" class="profile__social-link">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                                <a href="https://discord.com/users/1140890281634443295" target="_blank" class="profile__social-link">
+                                    <i class="ri-discord-fill"></i>
+                                </a>
+                                <div class="paragraph">
+                                    <div class="mb-5"></div>
+                                    <div class="mb-5"> - Skills Code "C++ , PYTHON , CHEAT ENGINE (<b class="text text-danger" class="Dekbangtlez-Text"> Not Developer </b>)" !</div>
+                                    <div class="mb-5"> - Copyright 2024, <b class="text text-info" class="Dekbangtlez-Text">Dekbangtlez.</b> All right reserved !</div>
+
+                                </div>
+                            </div>
+                        </center>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-end right" data-aos="fade-left" data-aos-duration="2200">
+                    <img class="tilted" style="top: 50px; box-shadow: 0px 0px 50px #000000; border-radius: 50px; width: 1500px; height: auto;" src="images/ErenYeager.gif" alt="Tilted Image">
+
+                </div>
+            </div>
+    </section>
+</body>
+<!-- <footer class="footer container" style="position: fixed; bottom: 0; left: 0; right: 0; text-align: center;">
+    <span class="footerz" style="color: rgb(97, 97, 97);">
+        Copyright 2024, <b class="text text-danger" class="Dekbangtlez-Text">Dekbangtlez.</b> All right reserved
+        </span>
+</footer> -->
+
+<script src="js/script.js"></script>
+
+<script src="js/main.js"></script>
+
+</html>
+
+
+<!-- <div class="containerzz">
+    <span class="text sec-text">DEKBANGTLEZ</span>
+</div>
+<img class="tilted" style="top: 30px; box-shadow: 0px 0px 50px #d40000; border-radius: 50px;" src="images/image.png" alt="Tilted Image">
+
+<br>
+<div class="profile__container grid">
+    <div class="profile__data">
+
+        <ul class="profile__social">
+            <a href="https://www.facebook.com/dekbangtlez" target="_blank" class="profile__social-link">
+                <i class="ri-facebook-circle-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/t34mspeakuserz/" target="_blank" class="profile__social-link">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://discord.com/users/1140890281634443295" target="_blank" class="profile__social-link">
+                <i class="ri-discord-fill"></i>
+            </a>
+        </ul>
+    </div>
+</div>
+<div class="container-skills">
+    <header class="content-header content-header-large content-header-uppercase">
+        <p class="custom-paragraph">
+            <mark class="custom-mark">Programming</mark> languages that i mainly use.
+        </p>
+    </header>
+</div>
+<br>
+<p align="center">
+    <img alt="c++" src="https://img.shields.io/badge/c++-000000.svg?style=for-the-badge&logo=c%2B%2B&logoColor=005494"></a>
+    <img alt="Python" src="https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python&logoColor=f2c83f"></a>
+</p> -->
