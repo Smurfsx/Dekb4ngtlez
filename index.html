@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Tiny5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <script>
+    <!-- <script>
         document.addEventListener('click', function() {
             document.getElementById('background-audio').play();
         }, {
@@ -35,12 +35,62 @@
                 alert("กด F12 หาพ่อมึงหรอไอลูกกะหรี่");
             }
         });
-    </script>
+    </script> -->
 
 </head>
+<script>
+    // ตรวจสอบการหมุนหน้าจอ
+    function checkOrientation() {
+        const alertBox = document.getElementById('orientationAlert');
+        if (window.innerHeight > window.innerWidth) {
+            alertBox.style.display = 'flex'; // แสดงการแจ้งเตือนถ้าจอเป็นแนวตั้ง
+        } else {
+            alertBox.style.display = 'none'; // ซ่อนการแจ้งเตือนถ้าจอเป็นแนวนอน
+        }
+    }
+
+    // เรียกใช้งานเมื่อมีการเปลี่ยนแปลงทิศทาง
+    window.addEventListener('resize', checkOrientation);
+    window.addEventListener('orientationchange', checkOrientation);
+
+    // เรียกใช้งานฟังก์ชันเมื่อเปิดเว็บครั้งแรก
+    checkOrientation();
+</script>
 <style>
     .mb-5 {
         margin-bottom: 3rem !important
+    }
+    /* ขนาดเริ่มต้น */
+    
+    .tilted {
+        width: 50vw;
+        /* ใช้ 50% ของความกว้างหน้าจอเพื่อให้ปรับอัตโนมัติ */
+        max-width: 700px;
+        /* จำกัดความกว้างสูงสุด */
+        transform: perspective(700px) rotateX(0deg) rotateY(100deg) rotateZ(0deg);
+        animation: moveUpDown 5s ease-in-out infinite;
+    }
+    /* ปรับขนาดสำหรับหน้าจอเล็ก */
+    
+    @media only screen and (max-width: 600px) {
+        .tilted {
+            width: 40vw;
+            /* ปรับขนาดเป็น 40% ของความกว้างหน้าจอ */
+            max-width: 300px;
+            /* จำกัดความกว้างสูงสุด */
+            transform: perspective(300px) rotateX(0deg) rotateY(100deg) rotateZ(0deg);
+        }
+    }
+    /* ปรับขนาดเพิ่มเติมสำหรับหน้าจอที่เล็กกว่านั้น */
+    
+    @media only screen and (max-width: 400px) {
+        .tilted {
+            width: 30vw;
+            /* ปรับขนาดเป็น 30% ของความกว้างหน้าจอ */
+            max-width: 200px;
+            /* จำกัดความกว้างสูงสุด */
+            transform: perspective(200px) rotateX(0deg) rotateY(100deg) rotateZ(0deg);
+        }
     }
 </style>
 
