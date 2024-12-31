@@ -27,8 +27,34 @@
     });
 </script>
 <style>
-    .dark-theme {
-        animation: moveUpDown 5s ease-in-out infinite;
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("https://i.pinimg.com/originals/d9/95/a2/d995a2b16bca29b9345f47a726fe6551.gif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        opacity: 0.1;
+        /* ความโปร่งใส */
+        /* เอฟเฟกต์เบลอ */
+        z-index: -1;
+        /* ทำให้ background อยู่ด้านล่าง */
+    }
+    
+    .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        padding: 50px;
+    }
+    
+    .tilted {
+        animation: moveUpDown 3s ease-in-out infinite;
     }
     
     .tilted {
@@ -46,97 +72,109 @@
             transform: perspective(700px) rotateX(5deg) rotateY(-15deg) translateX(5px) translateY(2px);
         }
     }
+    
+    .profile__name {
+        background: linear-gradient(45deg, #ff0000 10%, #ff8800 20%, #fbff00 30%, #3cfc01 40%, #00ffc8 50%, #0099ff 60%, #0011ff 70%, #a001fc 80%, #ff009d 90%);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shine 4s linear infinite;
+        margin-bottom: 1.25rem;
+        letter-spacing: 2px;
+    }
+    
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        /* จัดลิงก์ในแนวตั้ง */
+        align-items: center;
+        gap: 1rem;
+        /* ระยะห่างระหว่างลิงก์ */
+    }
+    
+    .social-links a {
+        font-family: Material, sans-serif;
+        display: flex;
+        color: #e6e6e6;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        font-family: Material, sans-serif;
+        background: linear-gradient(45deg, #ff0000 10%, #ff8800 20%, #fbff00 30%, #3cfc01 40%, #00ffc8 50%, #0099ff 60%, #0011ff 70%, #a001fc 80%, #ff009d 90%);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shine 4s linear infinite;
+        margin-bottom: 1.25rem;
+        letter-spacing: 2px;
+    }
+    
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
 </style>
 
-<body class="dark-theme">
-    <audio id="background-audio" hidden="true" autoplay="true" controlslist="nodownload noplaybackrate"><source src="assets/media/music.mp3" type="audio/mpeg"></audio>
+<body class="main-theme">
     <!--=============== HEADER ===============-->
-    <header class="profile container">
-        <!-- Theme button -->
+    <div class="background"></div>
+    <div class="content">
+        <center>
+            <header class="profile container">
+                <!-- Theme button -->
 
-        <div class="profile__container grid">
-            <div class="profile__data">
-                <div class="col-md-6 d-flex justify-content-end right" data-aos="fade-left" data-aos-duration="2200">
-                    <img class="tilted" style="top: 50px; box-shadow: 0px 0px 50px #000000; border-radius: 50px; width: 1500px; height: auto;" src="https://i.pinimg.com/originals/55/b2/b8/55b2b8e35e0ea6af0689e3fa708a1e7b.gif" alt="Tilted Image">
+                <div class="profile__container grid">
+                    <div class="profile__data">
+                        <div class="col-md-6 d-flex justify-content-end right" data-aos="fade-left" data-aos-duration="2200">
 
-                </div>
+                            <img class="tilted" style="top: 50px; box-shadow: 0px 0px 50px #000000; border-radius: 50px; width: 1500px; height: auto;" src="https://giffiles.alphacoders.com/115/115332.gif" alt="Tilted Image">
 
-                <h2 class="profile__name">Dekbangtlez</h2>
-                <h3 class="profile__profession">Developer (1%) & Graphic Design (2%)</h3>
-
-                <ul class="profile__social">
-                    <a href="https://www.facebook.com/Frxnccz" target="_blank" class="profile__social-link">
-                        <i class="ri-facebook-circle-fill"></i>
-                    </a>
-                    <a href="https://discord.com/users/1140890281634443295" target="_blank" class="profile__social-link">
-                        <i class="ri-discord-fill"></i>
-                    </a>
-                    <a href="https://t.me/Dekbangtlez" target="_blank" class="profile__social-link">
-                        <i class="ri-telegram-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/frxncccz/" target="_blank" class="profile__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-    <!--=============== MAIN ===============-->
-    <main class="main">
-        <section class="filters container">
-            <!--=============== FILTERS TABS ===============-->
-
-            <div class="skills__area">
-                <br>
-                <br>
-                <br>
-                <div class="skills__box">
-                    <div class="skills__group">
-                        <div class="skills__data">
-                            <i class="ri-checkbox-circle-line"></i>
-
-                            <div>
-                                <h3 class="skills__name">C++</h3>
-                                <span class="skills__level">Cheating FiveM</span>
-                            </div>
                         </div>
-
-                        <div class="skills__data">
-                            <i class="ri-checkbox-circle-line"></i>
-
-                            <div>
-                                <h3 class="skills__name">Python</h3>
-                                <span class="skills__level">Interface ui [FiveM Regedit , CMD]</span>
-                            </div>
+                        <br>
+                        <br>
+                        <h2 class="profile__name">DEKBANGTLEZ</h2>
+                        <h3 class="profile__profession">FIVEM CHEATING EXTERNAL - CHEAT ENGINE FIVEM</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/bangtlez.avt" target="_blank">
+                                <span>facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/dekbangtlez/" target="_blank">
+                                <span>instagram</span>
+                            </a>
                         </div>
-
-                    </div>
-
-                    <div class="skills__group">
-
-                        <div class="skills__data">
-                            <i class="ri-checkbox-circle-line"></i>
-
-                            <div>
-                                <h3 class="skills__name">Cheat Engine</h3>
-                                <span class="skills__level"> Cheat FiveM <p></p>Find Address Pointer , Array of byte</span>
-                            </div>
-                        </div>
+                        <!-- <ul class="profile__social">
+                        <a href="https://www.facebook.com/bangtlez.avt" target="_blank" class="profile__social-link">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a href="https://discord.com/users/1140890281634443295" target="_blank" class="profile__social-link">
+                            <i class="ri-discord-fill"></i>
+                        </a>
+                        <a href="https://t.me/Dekbangtlez" target="_blank" class="profile__social-link">
+                            <i class="ri-telegram-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dekbangtlez/" target="_blank" class="profile__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </ul> -->
                     </div>
                 </div>
-            </div>
+            </header>
 
-            </div>
-        </section>
-    </main>
+        </center>
+    </div>
 
     <!--=============== FOOTER ===============-->
     <!-- <footer class="footer container">
-        <span class="footer__copy">
-                Not made by me, made by <a href="https://github.com/vaibhavtomar04/portfolio" target="_blank"> someone on GitHub. </a>
-            </span>
-    </footer> -->
+    <span class="footer__copy">
+            Not made by me, made by <a href="https://github.com/vaibhavtomar04/portfolio" target="_blank"> someone on GitHub. </a>
+        </span>
+</footer> -->
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>

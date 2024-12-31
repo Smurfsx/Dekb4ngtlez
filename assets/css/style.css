@@ -5,8 +5,8 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import 'remixicon/fonts/remixicon.css';
 body {
-    background-image: url();
-    background-color: #111113;
+    /* background-image: url(""); */
+    background-color: #000000;
     color: white;
     display: flex;
     flex-direction: column;
@@ -207,7 +207,7 @@ h1 {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #111113;
+    background-color: #0C151D;
     border-left: 2px solid white;
     animation: animate 4s steps(18) infinite;
 }
